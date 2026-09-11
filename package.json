@@ -1,0 +1,18 @@
+{
+  "name": "the-gossip-grid",
+  "version": "1.0.0",
+  "description": "Reverse-stealth tactical puzzle game for Itch.io",
+  "main": "game.js",
+  "scripts": {
+    "test": "node --check game.js",
+    "start": "python3 -m http.server 8080",
+    "package:itch": "rm -f gossip-grid-itch.zip && zip -r gossip-grid-itch.zip index.html styles.css game.js README.md package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://localhost:26831/prashanttyadav/AI-train-for-Trading"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

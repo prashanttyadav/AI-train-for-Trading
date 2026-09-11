@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Gossip Grid — Be the Rumor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="board-panel">
+        <header>
+          <h1>The Gossip Grid <span>— Be the Rumor</span></h1>
+          <p class="tagline">Reverse stealth puzzle: guards se bachkar gaon ko afwaah se infect karo.</p>
+        </header>
+        <canvas id="gameCanvas" width="720" height="720" aria-label="Gossip Grid game board"></canvas>
+        <div class="controls">
+          <button id="restartBtn">Restart Level</button>
+          <button id="waitBtn">Wait Turn</button>
+          <button id="prevBtn">◀ Previous Level</button>
+          <button id="nextBtn">Next Level ▶</button>
+        </div>
+      </section>
+
+      <aside class="hud-panel">
+        <section class="status-card">
+          <h2>Mission</h2>
+          <p id="levelName"></p>
+          <p id="objective"></p>
+          <p id="turnInfo"></p>
+          <p id="infectedInfo"></p>
+          <p id="message" class="message"></p>
+        </section>
+
+        <section class="status-card">
+          <h2>How to Play</h2>
+          <ul>
+            <li>Infected villager select karo (purple ring).</li>
+            <li>Green highlighted villagers par spread click karo.</li>
+            <li>Guard red radius mein source/target hone par spread fail hoga.</li>
+            <li>Har move ke baad guards patrol shift karte hain.</li>
+            <li>Turn limit ke andar sabko infect karo.</li>
+          </ul>
+        </section>
+
+        <section class="status-card" id="rolePanel">
+          <h2>Roles</h2>
+          <div id="roleLegend"></div>
+        </section>
+      </aside>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
