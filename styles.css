@@ -1,0 +1,158 @@
+:root {
+  --bg: #0f1121;
+  --panel: #181c32;
+  --panel-border: #2b3155;
+  --text: #e7e8ff;
+  --muted: #b5bcf8;
+  --accent: #8e7dff;
+  --danger: #ff5c7a;
+  --ok: #4ce0a1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at 15% 20%, #1d2348, #0b0d1a 60%);
+  color: var(--text);
+}
+
+.app {
+  width: min(1280px, 96vw);
+  margin: 1.5rem auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.2rem;
+}
+
+.board-panel,
+.status-card {
+  background: linear-gradient(180deg, rgba(33, 39, 74, 0.95), rgba(18, 22, 44, 0.96));
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.board-panel {
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.65rem;
+}
+
+h1 span {
+  color: #a6beff;
+  font-weight: 500;
+}
+
+.tagline {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+canvas {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #39406f;
+  background: #101426;
+  cursor: pointer;
+}
+
+.controls {
+  margin-top: 0.85rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+button {
+  background: #2b3261;
+  border: 1px solid #4c5694;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+
+button:hover {
+  background: #36407a;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.hud-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.status-card {
+  padding: 0.9rem 1rem;
+}
+
+h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+}
+
+p,
+li {
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.message {
+  color: var(--text);
+  font-weight: 600;
+  min-height: 1.25rem;
+}
+
+.message.ok {
+  color: var(--ok);
+}
+
+.message.danger {
+  color: var(--danger);
+}
+
+ul {
+  margin: 0.45rem 0 0;
+  padding-left: 1.2rem;
+}
+
+#roleLegend {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.role-chip {
+  border: 1px solid #434b87;
+  border-radius: 10px;
+  padding: 0.45rem 0.55rem;
+  background: rgba(18, 23, 47, 0.6);
+}
+
+.role-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.15rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}
